@@ -15,10 +15,16 @@ console.log('The average price is $' + avg.toFixed(2));
 
 //Array of items that cost between $14 & $18
 
-var limited = priceArray.filter (function (num) {
-  return num >= 14 && num <= 18;
+
+var limited = items.filter(function(item){
+  return item.price >= 14 && item.price <= 18;
+});
+
+var describe = limited.forEach(function(item){
+
+   console.log('Items that cost between $14.00 USD and $18.00 USD:' + item.title);
+
 });
 
 
-
-console.log (limited);
+//FInd item with GBP
