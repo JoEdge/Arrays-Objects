@@ -37,4 +37,11 @@ var queen = currency.map.call(currency, function(a){
   console.log(a.title + "costs \u00A3" + a.price);
 });
 
-//
+//which items are made of wood
+
+var material = items.forEach(function(item){
+  item.materials.forEach(function(material){
+   if(material === 'wood')
+    console.log(item.title);
+  });
+});
