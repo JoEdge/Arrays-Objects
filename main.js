@@ -27,4 +27,14 @@ var describe = limited.forEach(function(item){
 });
 
 
-//FInd item with GBP
+//Find item with GBP
+//way with filter.need to ask about .call
+var currency = items.filter(function(a){
+   return a.currency_code === 'GBP';
+});
+
+var queen = currency.map.call(currency, function(a){
+  console.log(a.title + "costs \u00A3" + a.price);
+});
+
+//
