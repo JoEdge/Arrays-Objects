@@ -47,19 +47,21 @@ var material = items.forEach(function(item){
   });
 });
 
-
-//8 or more materials
-var numMaterials= [];
-
-var quantity = items.forEach(function(item){
-  numMaterials.push(item.materials);
-  if (numMaterials.length >= 8)
-    return(item.title);
-});
 */
+//8 or more materials
+var countAll = items.filter(function(count){
+  return count.materials <= 8;
+});
+
+var countMaterials = countAll.map.call
+
+
+
 
 //how many made by sellers
 
 var sellers = items.filter(function(item){
-  return item.who_made === 'i-did';
+  return item.who_made === 'i_did'
 });
+
+console.log(sellers.length + " were made by their sellers.");
