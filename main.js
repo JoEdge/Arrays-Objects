@@ -46,7 +46,7 @@ var material = items.forEach(function(item){
     console.log(item.title);
   });
 });
-*/
+
 
 //8 or more materials
 var numMaterials= [];
@@ -54,8 +54,12 @@ var numMaterials= [];
 var quantity = items.forEach(function(item){
   numMaterials.push(item.materials);
   if (numMaterials.length >= 8)
-    console.log(item.title);
+    return(item.title);
 });
+*/
 
+//how many made by sellers
 
-//
+var sellers = items.filter(function(item){
+  return item.who_made === 'i-did';
+});
