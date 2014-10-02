@@ -1,3 +1,4 @@
+/*
 //Q.1 Calculate avg price
 var priceArray = [];
 
@@ -15,7 +16,6 @@ console.log('The average price is $' + avg.toFixed(2));
 
 //Array of items that cost between $14 & $18
 
-
 var limited = items.filter(function(item){
   return item.price >= 14 && item.price <= 18;
 });
@@ -28,6 +28,7 @@ var describe = limited.forEach(function(item){
 
 
 //Find item with GBP
+
 //way with filter.need to ask about .call
 var currency = items.filter(function(a){
    return a.currency_code === 'GBP';
@@ -45,3 +46,16 @@ var material = items.forEach(function(item){
     console.log(item.title);
   });
 });
+*/
+
+//8 or more materials
+var numMaterials= [];
+
+var quantity = items.forEach(function(item){
+  numMaterials.push(item.materials);
+  if (numMaterials.length >= 8)
+    console.log(item.title);
+});
+
+
+//
