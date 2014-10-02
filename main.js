@@ -1,4 +1,4 @@
-/*
+
 //Q.1 Calculate avg price
 var priceArray = [];
 
@@ -47,13 +47,15 @@ var material = items.forEach(function(item){
   });
 });
 
-*/
+
 //8 or more materials
 var countAll = items.filter(function(count){
-  return count.materials <= 8;
+  return count.materials.length >= 8;
 });
 
-var countMaterials = countAll.map.call
+var countMaterials = countAll.map.call(countAll, function(a){
+  console.log(a.title + a.materials);
+});
 
 
 
